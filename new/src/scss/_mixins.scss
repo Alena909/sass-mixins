@@ -1,0 +1,23 @@
+@mixin input-background($color, $radius: 1.3px) {
+  background-color: $color;
+  border-radius: $radius;
+  box-shadow: $range_shadow;
+  border: $range_small_border;
+}
+@mixin range-thumb {
+  &::-moz-range-thumb {
+    @content;
+  }
+  &::-ms-thumb {
+    @content;
+  }
+}
+
+@mixin range-track() {
+  &::-webkit-slider-runnable-track {
+    @content;
+  }
+  &::-moz-range-track {
+    @content;
+  }
+}
